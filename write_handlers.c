@@ -87,7 +87,7 @@ int write_number(int is_negative, int ind, char buffer[],
  * @width: width
  * @prec: the precision specifier
  * @length: Number length
- * @padd: Pading char
+ * @padd: Padding char
  * @extra_c: Extra char
  *
  * Return: Number of printed chars.
@@ -183,11 +183,11 @@ int write_unsgnd(int is_negative, int ind,
 
 	buffer[i] = '\0';
 
-	if (flags & F_MINUS) /* Asign extra char to left of buffer [buffer>padd]*/
+	if (flags & F_MINUS) /* Asign extra char to left of buffer [buffer > padd]*/
 	{
 	return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
 	}
-	else /* Asign extra char to left of padding [padd>buffer]*/
+	else /* Asign extra char to left of padding [padd > buffer]*/
 	{
 	return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
 	}
